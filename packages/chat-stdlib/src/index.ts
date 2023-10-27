@@ -72,7 +72,7 @@ ${err.stack || '(no stack trace information)'}`
  */
 export function stringifyError(
   err: unknown,
-  errorDescription?: string,
+  errorDescription: string,
 ) {
   return `${errorDescription ?? '( no error description )'}\n${
     err instanceof Error
