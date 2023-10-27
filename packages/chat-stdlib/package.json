@@ -7,17 +7,24 @@
   "scripts": {
     "build": "yarn tsc",
     "lint": "yarn eslint src --ext js,ts",
-    "test": "yarn jest"
+    "watch-build": "yarn tsc --watch --preserveWatchOutput",
+    "watch-test": "yarn jest --watch",
+    "test": "yarn build && yarn jest",
+    "test:watch": "yarn watch-build & yarn watch-test"
   },
   "volta": {
     "node": "20.9.0",
     "yarn": "3.6.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-typescript": "^7.23.2",
     "@types/eslint": "^8",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "eslint": "^8",
+    "jest": "^29.7.0",
     "typescript": "5.3.0-beta"
   }
 }
