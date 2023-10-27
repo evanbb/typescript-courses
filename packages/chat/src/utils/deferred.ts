@@ -20,7 +20,7 @@ export class Deferred {
    * @constructor
    * @param {string} [description] - A description of the deferred operation.
    */
-  constructor(description) {
+  constructor(description?: string) {
     /**
      * The promise object associated with the deferred operation.
      * @type {Promise}
