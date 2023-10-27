@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "watch": "concurrently -n BUILD,TEST -c blue,green \"yarn watch-build\" \"yarn watch-test\"",
     "build": "yarn tsc",
     "lint": "yarn eslint src --ext js,ts",
     "watch-build": "yarn tsc --watch --preserveWatchOutput",
@@ -23,6 +24,7 @@
     "@types/eslint": "^8",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
+    "concurrently": "^8.2.2",
     "eslint": "^8",
     "jest": "^29.7.0",
     "typescript": "5.3.0-beta"
