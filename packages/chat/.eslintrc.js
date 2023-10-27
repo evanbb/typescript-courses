@@ -35,6 +35,12 @@ module.exports = {
   },
   overrides: [
     {
+      files: ['src/utils/**/*.{ts,tsx}'],
+      rules: {
+        "@typescript-eslint/strict-boolean-expressions": "error",
+      }
+    },
+    {
       /**
        * ESLINT CONFIG
        */
