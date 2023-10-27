@@ -13,7 +13,8 @@
     "baseUrl": ".",
     "rootDir": ".",
     "paths": {
-      "*": ["types/*"]
+      "*": ["types/*"],
+      "chat-stdlib": ["../chat-stdlib/dist/chat-stdlib-beta.d.ts"],
     }
   },
   "include": [
