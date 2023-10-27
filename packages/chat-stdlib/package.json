@@ -12,7 +12,10 @@
     "watch-build": "yarn tsc --watch --preserveWatchOutput",
     "watch-test": "yarn jest --watch",
     "test": "yarn build && yarn jest",
-    "test:watch": "yarn watch-build & yarn watch-test"
+    "test:watch": "yarn watch-build & yarn watch-test",
+    "api-report": "yarn api-extractor run",
+    "api-docs": "yarn api-documenter markdown -i temp -o docs",
+    "build-with-docs": "yarn build && yarn api-report && yarn api-docs"
   },
   "volta": {
     "node": "20.9.0",
