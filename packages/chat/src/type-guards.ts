@@ -9,7 +9,7 @@ export function isTypedArray<T>(
 
 export function isTeam(team: unknown): team is ITeam {
   return Boolean(
-    typeof team === 'object' &&
+    typeof team === 'object' && !!team &&
       'iconUrl' in team &&
       typeof team.iconUrl !== 'undefined' &&
       'name' in team &&
